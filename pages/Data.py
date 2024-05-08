@@ -81,21 +81,27 @@ def get_github_data(url):
     # make request
     response = requests.get(url)
 
+
     # check if download was successful
     if response.status_code == 200:
+        try:
 
-        data_github = (
-            response.json()
-        )  # deserialize JSON string received from the HTTP response
-        data_github = data_github["payload"]["blob"][
-            "csv"
-        ]  # access main data from csv key
+            data_github = (
+                response.json()
+            )  # deserialize JSON string received from the HTTP response
+            data_github = data_github["payload"]["blob"][
+                "csv"
+            ]  # access main data from csv key
+        except json.JSONDecodeError:
+            st.error("Succesful in decoding JSON data from Github")
+            return  None  # or return a default value:    
 
         df = pd.DataFrame(data_github[1:], columns=data_github[0])
+        
     else:
         st.error("Failed to download data from Github")
 
-    return data_github
+    return None
 
 
 @st.cache_data(show_spinner="Cleaning Retrieved Data...")
@@ -119,9 +125,9 @@ def clean_data(data_db, data_github):
     data_db = data_db.dropna(subset=["Churn"])
     data_db = data_db.replace({True: "Yes", False: "No"})
 
-    data_github["SeniorCitizen"] = data_github["SeniorCitizen"].replace(
-        {1: "Yes", 0: "No"}
-    )
+    # data_github["SeniorCitizen"] = data_github["SeniorCitizen"].replace(
+    #     {1: "Yes", 0: "No"}
+    # )
 
     cleaned_data = pd.concat([data_db, data_github], axis=0).reset_index(drop=True)
 
