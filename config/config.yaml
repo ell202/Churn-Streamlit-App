@@ -1,0 +1,21 @@
+cookie:
+  expiry_days: 30
+  key: school
+  name: school
+credentials:
+  usernames:
+    Rejoice Ngwere:
+      email: rejoicengwere18@gmail.com
+      failed_login_attempts: 0
+      logged_in: false
+      name: Rejoice Ngwere
+      password: $2b$12$WbQX73x4/CSd06zDAw79gOeetXGNIZJrIaFSlugON8olVqRrDTOj2
+    Millicent Nyachowe:
+      email: r2110558y@students.msu.ac.zw
+      failed_login_attempts: 0
+      logged_in: false
+      name: Rejoice Ell
+      password: $2b$12$OI1VbXd8AqJWEyEeZohRSe2rDocwHUH76g0Tk6shqxfCX97lWvJba
+preauthorized:
+  emails:
+  - rejoicengwere18@gmail.com
