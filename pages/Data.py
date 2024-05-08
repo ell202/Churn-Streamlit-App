@@ -168,7 +168,7 @@ def main():
     )
 
     with tab1:
-        st.header("Proprietory Data from Vodafone")
+        st.header("Proprietory Data from Telco")
         selected_features = st.selectbox(
             "View specific features?",
             options=["All Columns", "Numeric Features", "Categorical Features"],
