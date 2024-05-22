@@ -8,6 +8,10 @@ from typing import List, Tuple, Union
 from utils import login
 import json
 
+
+def display_logo():
+    st.sidebar.image("telcologo.png", width=200) 
+
 ## set page configuration, title and description
 def set_page_config() -> None:
     st.set_page_config(page_title="Churn Data", page_icon=":chart_with_upwards_trend:")
@@ -21,16 +25,14 @@ def display_title():
 
     st.write(
         """
-        Explore a summary of the customer data used in our churn prediction model. 
-        Gain insights into key customer characteristics that influence churn predictions. 
+        Let's dive deeper into the customer data that fuels our churn prediction model. By analyzing this data, we can gain valuable insights into the key characteristics of customers who are most likely to churn.
+        
         """
     )
 
     st.write(
         """
-        Use this preview to understand the data behind our predictions and 
-        make informed decisions about customer retention strategies.
-        
+        This understanding will allow us to identify patterns and trends that can inform targeted retention strategies. We're essentially looking to uncover the red flags that indicate a customer might leave, allowing us to proactively address their needs and keep them engaged.
         """
     )
 
@@ -142,6 +144,7 @@ def clean_data(data_db, data_github):
 
 
 def main():
+    display_logo()
     display_title()
     # conn = init_connection()  # establish connection
 

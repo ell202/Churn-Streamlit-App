@@ -5,6 +5,8 @@ from typing import List, Tuple
 import os
 from utils import login
 
+def display_logo():
+    st.sidebar.image("telcologo.png", width=200) 
 
 # function to set up page configuration
 def set_page_config():
@@ -35,6 +37,7 @@ def display_history():
 
 
 def main():
+    display_logo()
     display_title_container()
     display_history()
 

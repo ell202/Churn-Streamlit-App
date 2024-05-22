@@ -2,3 +2,4 @@ tenure,MonthlyCharges,TotalCharges,SeniorCitizen,Partner,Dependents,MultipleLine
 0,0.0,0.0,Yes,Yes,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,2024-05-07 11:03,Random Forest,Yes
 0,60.0,120.0,Yes,Yes,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,2024-05-07 15:08,XGBoost Classifier,Yes
 0,0.0,0.0,Yes,Yes,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,2024-05-08 14:58,Random Forest,Yes
+5,30.0,30.0,No,No,No,No,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),2024-05-22 16:18,XGBoost Classifier,No

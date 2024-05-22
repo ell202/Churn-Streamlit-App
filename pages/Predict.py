@@ -8,6 +8,8 @@ import os
 from datetime import datetime
 from utils import login
 
+def display_logo():
+    st.sidebar.image("telcologo.png", width=200) 
 
 # function to set up page configuration
 def set_page_config():
@@ -286,8 +288,8 @@ def store_history(input_df: pd.DataFrame, selected_model: str, prediction: str):
 
 
 def main():
+    display_logo()
     
-
     display_title_container()
 
     inputs = display_sidebar_form()
